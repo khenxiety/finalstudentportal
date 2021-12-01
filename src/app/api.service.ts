@@ -22,17 +22,17 @@ export class ApiService {
 
   getStudents(){
     // return this.http.get('https://btihs-portal-backends.herokuapp.com/getaccounts.php');
-    return this.http.get('http://localhost/Projects/BTIHSPortal/backend/getaccounts.php');
+    return this.http.get('https://btihs-portal-backends.herokuapp.com/getaccounts.php');
     
   }
 
   getStudentInfo(id: string){
-    return this.http.get('http://localhost/Projects/BTIHSPortal/backend/getStudentInfo.php?id='+id);
+    return this.http.get('https://btihs-portal-backends.herokuapp.com/getStudentInfo.php?id='+id);
 
   }
 
   getStudentRegistration(id: string){
-    return this.http.get('http://localhost/Projects/BTIHSPortal/backend/getStudentRegistration.php?id='+id);
+    return this.http.get('https://btihs-portal-backends.herokuapp.com/getStudentRegistration.php?id='+id);
 
   }
 
@@ -40,22 +40,22 @@ export class ApiService {
   // subjects
 
   getEnrolledSubjects(id:string){
-    return this.http.get('http://localhost/Projects/BTIHSPortal/backend/getStudentEnrolledSubjects.php?id='+id);
+    return this.http.get('https://btihs-portal-backends.herokuapp.com/getStudentEnrolledSubjects.php?id='+id);
 
   }
 
   getSched(id:string){
-    return this.http.get('http://localhost/Projects/BTIHSPortal/backend/getSchedules.php?id='+id);
+    return this.http.get('https://btihs-portal-backends.herokuapp.com/getSchedules.php?id='+id);
 
   }
 
   getAdvisories(){
-    return this.http.get('http://localhost/Projects/BTIHSPortal/backend/getAdvisories.php');
+    return this.http.get('https://btihs-portal-backends.herokuapp.com/getAdvisories.php');
 
   }
 
   getSchoolYear(id: string){
-    return this.http.get('http://localhost/Projects/BTIHSPortal/backend/getSchoolYear.php?id='+id);
+    return this.http.get('https://btihs-portal-backends.herokuapp.com/getSchoolYear.php?id='+id);
 
 
   }
@@ -67,7 +67,7 @@ export class ApiService {
 
   // forgot Password service
   updatePassword(id: string,data: any){
-    return this.http.put('http://localhost/Projects/BTIHSPortal/backend/updateForgotPassword.php?id='+id,data);
+    return this.http.put('https://btihs-portal-backends.herokuapp.com/updateForgotPassword.php?id='+id,data);
 
   }
 
