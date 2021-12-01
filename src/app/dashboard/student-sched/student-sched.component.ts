@@ -25,11 +25,7 @@ export class StudentSchedComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if(this.code=null){
-    }else{
-      this.router.navigate(['error']);
-
-    }
+    
   }
 
   myFunction(){
