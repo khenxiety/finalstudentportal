@@ -1,0 +1,293 @@
+// @import url('https://fonts.googleapis.com/css2?family=Yaldevi:wght@500&display=swap');
+
+
+
+.login-component{
+    height: 100%;
+    width: 100vw;
+}
+header{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+}
+.mobile{
+    display: none;
+}
+
+.header-content{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+
+
+    .logo{
+        height: 100%;
+        width: max-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a{
+            color: #1E2329;
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: 900;
+            color: rgb(155, 38, 38);
+        }
+        
+    }
+    .right{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        a{
+            color: rgb(94, 94, 94);
+
+        }
+        
+    }
+}
+.main-content{
+   
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .login-container{
+        
+        width: 600px;
+        height: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+
+
+        .content{
+            
+            width: 100%;
+            height: 100%;
+
+
+            .image{
+                width: 100%;
+                height: max-content;
+                display: flex;
+                justify-content: center;
+                img{
+                    border-radius: 100%;
+                    box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.603);
+
+                }
+            }
+
+
+            .form{
+                width: 100%;
+                background-color: white;
+                // box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.603);
+                box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+                height: max-content;
+                border-radius: 10px;
+                flex-direction: column;
+                
+                padding-top: 50px;
+                padding-left: 60px;
+                padding-right: 60px;
+                padding-bottom: 40px;
+
+
+
+                .form-header{
+                    display: flex;
+                    width: 100%;
+                    height: max-content;
+                    justify-content: center;
+
+                    h1{
+                        font-weight: 500;
+                        // font-family: 'Yaldevi', sans-serif;
+                        color: #313131;
+                    }
+                }
+
+                
+
+
+                .inputs{
+                    width: 100%;
+                    padding-top: 50px;
+                    animation: fade 1s ease forwards;
+
+
+                    .input-col{
+                        padding-bottom: 20px;
+
+                        .input-field{
+                            border: 1px solid rgb(180, 180, 180);
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            padding: 10px;
+                            border-radius: 8px;
+                            -moz-box-shadow:    inset 0 0 5px #a1a1a1d3;
+                            -webkit-box-shadow: inset 0 0 5px #a1a1a1d3;
+                            box-shadow:         inset 0 0 5px #a1a1a1d3;
+
+                            input{
+                                width: 100%;
+                                padding-left: 10px;
+                                border: none;
+                                outline: none;
+                                border-left: 1px solid #80808077;
+                                font-size: 1.2rem;
+                            }
+                            
+
+                        }
+                        
+                        
+                        
+                    }
+                    .bottom{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-top: 10px;
+
+
+                        .bottom-box{
+                            height: max-content;
+                            width: max-content;
+                            background-color: #f5f5f5;
+                            padding: 8px;
+                            border-radius: 5px;
+
+                            // a{
+                            //     color: #4039a0;
+                            // }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+.active{
+    background-color: #848E9C;
+
+}
+.btn{
+    background-color:#b83838 ; 
+    color: white; 
+    width: 100%; 
+    height: 50px; 
+    border-radius: 8px; 
+    margin-top: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    font-size: 1.1rem;
+}
+
+.btn:hover{
+    background-color:#9c3030 ;
+}
+
+
+
+
+@keyframes fade {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    
+}
+
+
+// mobile
+
+
+
+@media (max-width:800px) {
+    .login-component{
+        display: none;
+    }
+    .mobile{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        padding-left: 20px;
+        padding-right: 20px;
+        background-image: linear-gradient(to bottom,#ffffff,rgb(255, 255, 255),#ffffffe8),url("/assets/bauantech.jpg");
+
+        height: 100%;
+        .mobile-header{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .input-field{
+            border: 1px solid rgb(180, 180, 180);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 10px;
+            border-radius: 8px;
+            -moz-box-shadow:    inset 0 0 5px #a1a1a1d3;
+            -webkit-box-shadow: inset 0 0 5px #a1a1a1d3;
+            box-shadow:         inset 0 0 5px #a1a1a1d3;
+
+            input{
+                width: 100%;
+                padding-left: 10px;
+                border: none;
+                outline: none;
+                height: 1.6rem;
+                border-left: 1px solid #80808077;
+                font-size: 1.2rem;
+            }
+            
+
+        }
+        .bottom{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+
+
+            .bottom-box{
+                height: max-content;
+                width: max-content;
+                background-color: #f5f5f5;
+                padding: 8px;
+                border-radius: 5px;
+
+                // a{
+                //     color: #4039a0;
+                // }
+            }
+        }
+
+    }
+    
+    
+}
+

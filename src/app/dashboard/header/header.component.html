@@ -1,0 +1,43 @@
+
+<div class="pos-f-t">
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="bg-light p-4">
+        <h4 class="text-black">Collapsed content</h4>
+        <span class="text-muted">Toggleable via the navbar brand.</span>
+      </div>
+    </div>
+    <nav class="navbar ">
+        <div class="content">
+            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        
+                <i class="fas fa-bars"></i>
+                
+              </button> -->
+              <button id="toggleSidemenu" class="navbar-toggler" type="button" (click)="toggleSidemenuOff()" *ngIf="toggleOn == true">
+        
+                <i class="fas fa-bars"></i>
+                
+              </button>
+              <button id="toggleSidemenu" class="navbar-toggler" type="button" (click)="toggleSidemenuOn()" *ngIf="toggleOff == true">
+        
+                <i class="fas fa-bars"></i>
+                
+              </button>
+              <a style="margin-left: 5px;" href="">BTHS Student Portal</a>
+
+        </div>
+
+        <div class="dropdown" *ngFor="let name of name">
+            <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{ name.fname }}
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Profile</a>
+              <a class="dropdown-item" (click)="logout()">Log out</a>
+              
+            </div>
+          </div>
+      
+      
+    </nav>
+  </div>

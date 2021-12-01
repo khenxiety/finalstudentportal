@@ -1,0 +1,244 @@
+<div class="container" style=" padding: 0;">
+    <div class="timetable-img text-center">
+        <img src="img/content/timetable.png" alt="">
+    </div>
+    <div class="table-responsive">
+        <table class="table table-bordered text-center">
+            <thead>
+                <tr class="bg-light-gray">
+                    <th class="text-uppercase">Subject
+                    </th>
+                    <th class="text-uppercase">Monday</th>
+                    <th class="text-uppercase">Tuesday</th>
+                    <th class="text-uppercase">Wednesday</th>
+                    <th class="text-uppercase">Thursday</th>
+                    <th class="text-uppercase">Friday</th>
+                    <th class="text-uppercase">Saturday</th>
+                </tr>
+            </thead>
+            <tbody *ngFor='let scheds of sched'>
+                <!-- <tr *ngFor='let scheds of sched'>
+                    <td class="align-middle">09:00am</td>
+                    <td >
+                        <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13" *ngIf="scheds.monday">{{ scheds.name }}</span>
+                        <div class="margin-10px-top font-size14">{{ scheds.monday }}</div>
+                        <div class="font-size13 text-light-gray" *ngIf="scheds.monday==null">Vacant</div>
+                        <div class="font-size13 text-light-gray" *ngIf="scheds.monday">{{ scheds.prof }}</div>
+
+                    </td>
+                    <td >
+                        <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13" *ngIf="scheds.tuesday">{{ scheds.name }}</span>
+                        
+                        <div class="margin-10px-top font-size14">{{ scheds.tuesday }}</div>
+                        <div class="font-size13 text-light-gray" *ngIf="scheds.tuesday==null">Vacant</div>
+                        <div class="font-size13 text-light-gray" *ngIf="scheds.tuesday">{{ scheds.prof }}</div>
+
+                    </td>
+                    <td >
+                        <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13" *ngIf="scheds.wed">{{ scheds.name }}</span>
+                        
+                        <div class="margin-10px-top font-size14">{{ scheds.wed }}</div>
+                        <div class="font-size13 text-light-gray" *ngIf="scheds.wed==null">Vacant</div>
+                        <div class="font-size13 text-light-gray" *ngIf="scheds.wed">{{ scheds.prof }}</div>
+
+                    </td>
+                    
+                    <td >
+                        <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13" *ngIf="scheds.thurs">{{ scheds.name }}</span>
+                        
+                        <div class="margin-10px-top font-size14">{{ scheds.thurs }}</div>
+                        <div class="font-size13 text-light-gray" *ngIf="scheds.thurs==null">Vacant</div>
+                        <div class="font-size13 text-light-gray" *ngIf="scheds.thurs">{{ scheds.prof }}</div>
+
+                    </td>
+                    <td >
+                        <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13" *ngIf="scheds.friday">{{ scheds.name }}</span>
+                        
+                        <div class="margin-10px-top font-size14">{{ scheds.friday }}</div>
+                        <div class="font-size13 text-light-gray" *ngIf="scheds.friday==null">Vacant</div>
+                        <div class="font-size13 text-light-gray" *ngIf="scheds.friday">{{ scheds.prof }}</div>
+
+                    </td>
+                    <td >
+                        <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13" *ngIf="scheds.saturday">{{ scheds.name }}</span>
+                        
+                        <div class="margin-10px-top font-size14">{{ scheds.saturday }}</div>
+                        <div class="font-size13 text-light-gray" *ngIf="scheds.saturday==null">Vacant</div>
+                        <div class="font-size13 text-light-gray" *ngIf="scheds.saturday">{{ scheds.prof }}</div>
+
+                    </td>
+                    
+                </tr> -->
+
+                <tr>
+                    <td class="align-middle">1</td>
+                    <td>
+                        <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13" *ngIf="scheds.mondaysched">{{ scheds.subject_id }}</span>
+                        <div class="margin-10px-top font-size14">{{ scheds.mondaysched }}</div>
+                        <div class="font-size13 text-light-gray" *ngIf="scheds.mondaysched">Vacant</div>
+                        <div class="font-size13 text-light-gray" *ngIf="scheds.mondaysched">{{ scheds.prof }}</div>
+                        <!-- <div class="font-size13 text-light-gray">Ivana Wong</div> -->
+                    </td>
+                    <td >
+                        <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13" *ngIf="scheds.tuesdaysched">{{ scheds.subject_id }}</span>
+                        
+                        <div class="margin-10px-top font-size14">{{ scheds.tuesdaysched }}</div>
+                        <div class="font-size13 text-light-gray" *ngIf="scheds.tuesdaysched==null">Vacant</div>
+                        <div class="font-size13 text-light-gray" *ngIf="scheds.tuesdaysched">{{ scheds.prof }}</div>
+
+                    </td>
+                    <td >
+                        <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13" *ngIf="scheds.wedsched">{{ scheds.subject_id }}</span>
+                        
+                        <div class="margin-10px-top font-size14">{{ scheds.wedsched }}</div>
+                        <div class="font-size13 text-light-gray" *ngIf="scheds.wedsched==null">Vacant</div>
+                        <div class="font-size13 text-light-gray" *ngIf="scheds.wedsched">{{ scheds.prof }}</div>
+
+                    </td>
+                    
+                    <td >
+                        <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13" *ngIf="scheds.thursdaysched">{{ scheds.subject_id }}</span>
+                        
+                        <div class="margin-10px-top font-size14">{{ scheds.thursdaysched }}</div>
+                        <div class="font-size13 text-light-gray" *ngIf="scheds.thursdaysched==null">Vacant</div>
+                        <div class="font-size13 text-light-gray" *ngIf="scheds.thursdaysched">{{ scheds.prof }}</div>
+
+                    </td>
+                    <td >
+                        <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13" *ngIf="scheds.fridaysched">{{ scheds.subject_id }}</span>
+                        
+                        <div class="margin-10px-top font-size14">{{ scheds.fridaysched }}</div>
+                        <div class="font-size13 text-light-gray" *ngIf="scheds.fridaysched==null">Vacant</div>
+                        <div class="font-size13 text-light-gray" *ngIf="scheds.fridaysched">{{ scheds.prof }}</div>
+
+                    </td>
+                    <td >
+                        <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13" *ngIf="scheds.saturdaysched">{{ scheds.subject_id }}</span>
+                        
+                        <div class="margin-10px-top font-size14">{{ scheds.saturdaysched }}</div>
+                        <div class="font-size13 text-light-gray" *ngIf="scheds.saturdaysched==null">Vacant</div>
+                        <div class="font-size13 text-light-gray" *ngIf="scheds.saturdaysched">{{ scheds.prof }}</div>
+
+                    </td>
+                    <!-- <td class="bg-light-gray">
+
+                    </td>
+                    <td>
+                        <span class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Art</span>
+                        <div class="margin-10px-top font-size14">10:00-11:00</div>
+                        <div class="font-size13 text-light-gray">Kate Alley</div>
+                    </td>
+                    <td>
+                        <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Yoga</span>
+                        <div class="margin-10px-top font-size14">10:00-11:00</div>
+                        <div class="font-size13 text-light-gray">Marta Healy</div>
+                    </td>
+                    <td>
+                        <span class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">English</span>
+                        <div class="margin-10px-top font-size14">10:00-11:00</div>
+                        <div class="font-size13 text-light-gray">James Smith</div>
+                    </td>
+                    <td class="bg-light-gray">
+
+                    </td> -->
+                </tr>
+
+                <!-- <tr>
+                    <td class="align-middle">11:00am</td>
+                    <td>
+                        <span class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Break</span>
+                        <div class="margin-10px-top font-size14">11:00-12:00</div>
+                    </td>
+                    <td>
+                        <span class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Break</span>
+                        <div class="margin-10px-top font-size14">11:00-12:00</div>
+                    </td>
+                    <td>
+                        <span class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Break</span>
+                        <div class="margin-10px-top font-size14">11:00-12:00</div>
+                    </td>
+                    <td>
+                        <span class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Break</span>
+                        <div class="margin-10px-top font-size14">11:00-12:00</div>
+                    </td>
+                    <td>
+                        <span class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Break</span>
+                        <div class="margin-10px-top font-size14">11:00-12:00</div>
+                    </td>
+                    <td>
+                        <span class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Break</span>
+                        <div class="margin-10px-top font-size14">11:00-12:00</div>
+                    </td>
+                </tr> -->
+
+                <!-- <tr>
+                    <td class="align-middle">12:00pm</td>
+                    <td class="bg-light-gray">
+
+                    </td>
+                    <td>
+                        <span class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Art</span>
+                        <div class="margin-10px-top font-size14">12:00-1:00</div>
+                        <div class="font-size13 text-light-gray">Kate Alley</div>
+                    </td>
+                    <td>
+                        <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Dance</span>
+                        <div class="margin-10px-top font-size14">12:00-1:00</div>
+                        <div class="font-size13 text-light-gray">Ivana Wong</div>
+                    </td>
+                    <td>
+                        <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Music</span>
+                        <div class="margin-10px-top font-size14">12:00-1:00</div>
+                        <div class="font-size13 text-light-gray">Ivana Wong</div>
+                    </td>
+                    <td class="bg-light-gray">
+
+                    </td>
+                    <td>
+                        <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Yoga</span>
+                        <div class="margin-10px-top font-size14">12:00-1:00</div>
+                        <div class="font-size13 text-light-gray">Marta Healy</div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="align-middle">01:00pm</td>
+                    <td>
+                        <span class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">English</span>
+                        <div class="margin-10px-top font-size14">1:00-2:00</div>
+                        <div class="font-size13 text-light-gray">James Smith</div>
+                    </td>
+                    <td>
+                        <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Music</span>
+                        <div class="margin-10px-top font-size14">1:00-2:00</div>
+                        <div class="font-size13 text-light-gray">Ivana Wong</div>
+                    </td>
+                    <td class="bg-light-gray">
+
+                    </td>
+                    <td>
+                        <span class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">English</span>
+                        <div class="margin-10px-top font-size14">1:00-2:00</div>
+                        <div class="font-size13 text-light-gray">James Smith</div>
+                    </td>
+                    <td>
+                        <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Yoga</span>
+                        <div class="margin-10px-top font-size14">1:00-2:00</div>
+                        <div class="font-size13 text-light-gray">Marta Healy</div>
+                    </td>
+                    <td>
+                        <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Music</span>
+                        <div class="margin-10px-top font-size14">1:00-2:00</div>
+                        <div class="font-size13 text-light-gray">Ivana Wong</div>
+                    </td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+
+<div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+        
+        <h2 class="modal-title" id="exampleModalLongTitle">Forgot Password</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+        <div class="modal-body">
+            <!-- <div class="bar">
+                <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+            </div> -->
+            <div class="card">
+                <div class="card-body" style="display: flex; justify-content: center; flex-direction: column;">
+                  <p>Enter your registered email address below. An email will be sent to this address for password reset confirmation</p>
+                  <!-- <input class="form-control form-control-lg" type="text" [(ngModel)]="password" name="password" placeholder="Enter your new password"> -->
+                    
+                  <input class="form-control form-control-lg" [(ngModel)]="email" type="text" placeholder="Email address" style="margin-bottom:10px; height:40px; padding-left:5px;">
+                  <small id="passwordHelpBlock" class="form-text text-muted">
+                    * If you do not receive the confirmation email within a few minutes after submit, please check your Spam folder.
+                  </small>
+
+                  <div class="but">
+                      <button  class="btn button" (click)="sendMail('asd')">Submit</button>
+                  </div>
+                
+                </div>
+              </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+</div>
+  

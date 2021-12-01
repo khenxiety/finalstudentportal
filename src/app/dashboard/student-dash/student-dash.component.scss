@@ -1,0 +1,236 @@
+.dashboard-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    background-color: rgb(216, 216, 216);
+
+    
+
+
+
+
+    
+
+
+    .main-content{
+        height: 100%;
+        width: 100%;
+        padding-left: 5px;
+        
+
+        .contents{
+            height: 100%;
+            width: 100%;
+            
+            
+            // box-shadow: 0px 0px 5px rgb(49, 49, 49);
+            .box{
+                height: 100%;
+
+                width: 100%;
+                
+                // background-color: rgb(201, 201, 201);
+                display: flex;
+                
+                
+                flex-direction: column;
+
+
+                .main-menu{
+                    height: 100%;
+                    
+                    width: 100%;
+                    // background-color: rgb(255, 255, 255);
+                    background-image: linear-gradient(to bottom,rgba(247, 247, 247, 0.986),rgba(255, 255, 255, 0.993)),url("https://scontent.fcrk1-3.fna.fbcdn.net/v/t1.18169-9/13567319_1629546077362956_8163762290588827605_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=e3f864&_nc_eui2=AeH8GPA1hls7cGxyB5mI-b6MyTCAmeQLgrPJMICZ5AuCs43cscJ_oUgSeHNcPBQkQ7pc2oaQELuYhNhEa4H9WXVl&_nc_ohc=CiinyhrtV3YAX82qbC-&_nc_ht=scontent.fcrk1-3.fna&oh=3cb2e0b6dc00f3b2e7fb3753225e1b76&oe=6163E229");
+
+                    
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+                    
+
+                    
+                    border-radius: 6px;
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    padding: 30px;
+                    animation: fade-mains .3s ease-in-out forwards;
+
+                    .content-header{
+                        display: flex;
+                        justify-content: space-between;
+                        height: 50px;
+                        align-items: center;
+                    }
+
+                    .profile{
+                        line-height: 1.5;
+                        // border-bottom: .5px solid #d6d6d6;
+                        margin-bottom: 25px;
+
+                        
+
+                        .card-body{
+                            display: flex;
+                            justify-content: space-between;
+                            padding-top: 25px;
+                            padding-bottom: 25px;
+
+
+
+                            .image{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                            
+
+                        }
+                    }
+                    .info{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        height:max-content;
+                        span{
+                            color: rgb(155, 38, 38);
+                            font-size: 1.2rem;
+                            
+                            font-weight: 900;
+                        }
+                        
+
+                    }
+
+                    .grades-classes{
+                        margin-top: 10px;
+                        
+                        margin-bottom: 25px;
+
+
+
+                        .grades-container{
+                            
+                        }
+                    }
+
+
+                }
+                // .left-menu{
+                //     height: 100%;
+                //     width: 21%;
+                //     background-color: rgb(255, 255, 255);
+                //     box-shadow: 0px 0px 5px rgb(83, 83, 83);
+                //     border-radius: 6px;
+                // }
+                    
+                    
+                
+                
+                
+
+                
+            }
+        }
+    }
+}
+
+.tab-content{
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    
+}
+
+@keyframes fade-mains{
+    from{
+        // transform: translateY(-1rem);
+        opacity: 0;
+    }
+    to{
+        // transform: translateY(0rem);
+        opacity: 1;
+
+
+    }
+}
+
+
+hr{
+    border: .5px solid #d6d6d6;
+}
+
+.menu-titles{
+    color: rgb(155, 38, 38);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 900;
+
+}
+
+.right-arrow{
+    margin-right: 5px;
+}
+.pabold{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.subs{
+    
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    height: 100%;
+    width: 90%;
+    // background: url("https://image.freepik.com/free-vector/hand-drawn-science-education-background_23-2148499325.jpg");
+    background-image: linear-gradient(to bottom,rgba(255, 255, 255, 0.795),rgba(255, 255, 255, 0.925)),url("https://image.freepik.com/free-vector/hand-drawn-science-education-background_23-2148499325.jpg");
+
+}
+.subs:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.col-md-3{
+    margin-top: 10px;
+    
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.card-header{
+    font-weight: 600;
+    font-size: 1.15rem;
+}
+.tab-pane{
+    padding-top: 25px;
+    background-color: white;
+}
+.glyphicon {  margin-bottom: 10px;margin-right: 10px;}
+
+small {
+display: block;
+line-height: 1.428571429;
+color: #999;
+}
+
+
+
+
+
+@media (max-width:800px) {
+    app-side-menu{
+        display: none;
+    }
+}
+@media (max-width:320px) {
+    .pabold{
+        font-size: 1rem;
+    }
+    
+}
+
+
+
+
+
+
+

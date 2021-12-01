@@ -1,0 +1,199 @@
+<div class="dashboard-container">
+    <app-side-menu id="sidemenu"></app-side-menu>
+
+
+
+    <div class="main-content">
+
+        <div class="contents">
+            <div class="box">
+              <app-header style="margin-bottom: 5px;"></app-header>
+              
+
+
+                <div class="main-menu">
+
+                    <div class="profile">
+
+                        <header class="content-header">
+                          <h4 class="menu-titles">PROFILE</h4>
+                            
+
+                            
+                            <div class="modal fade" id="student-links" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h2 class="modal-title" id="exampleModalLabel">Links</h2>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="modal-body" *ngFor="let infos of info">
+                                    <div class="row">
+                                      <div class="col">
+
+                                        <div class="links" style="background-color: rgb(233, 233, 233); display:flex;padding:10px; padding-top: 5px; padding-bottom: 5px; ">
+                                          <span style="color: #464646; font-size: 1.1rem;">Email <i class="fas fa-envelope-square"></i></span>
+                                          <div  class="cont" style="font-size: 1.1rem; display:flex; align-items:center;border-left: 1px solid gray; text-align: center;margin-left: 10px; padding-left: 10px;">
+                                            {{ infos.email }}
+                                          </div>
+                                        </div>
+
+                                      </div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col" style="margin-top: 5px;">
+
+                                        <div class="links" style="background-color: rgb(233, 233, 233); display:flex;padding:10px; padding-top: 5px; padding-bottom: 5px; ">
+                                          <span style="color: #464646; font-size: 1.1rem;">Contact No. <i class="fas fa-envelope-square"></i></span>
+                                          <div class="cont" style="font-size: 1.1rem; display:flex; align-items:center;border-left: 1px solid gray; text-align: center;margin-left: 10px; padding-left: 10px;">
+                                            {{ infos.cellphone_num }}
+                                          </div>
+                                        </div>
+
+                                      </div>
+                                      <!-- <button class="btn btn-primary hidden-print" (click)="myFunction()"><span class="glyphicon glyphicon-print" aria-hidden="true"></span> Print</button> -->
+                                      
+                                    </div>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+
+
+
+                        </header>
+                        
+
+                        <div class="card" *ngFor="let infos of info">
+                          <div class="card-body prof" >
+                            <div class="image" >
+                              <img height="100px" width="100px" [src]="infos.photo" alt="">
+
+                          
+                              <div class="information" style="margin-left: 10px;" >
+                                  <p ><i class="fas fa-caret-right right-arrow" ></i><span class="pabold" >{{ infos.fname }} {{ infos.lname }}</span></p>
+                                  <p><i class="fas fa-caret-right right-arrow" ></i>Student-Code: <b>{{ infos.studid }}</b></p>
+                                  <p><i class="fas fa-caret-right right-arrow" ></i>Email: <b>{{ infos.email }}</b></p>
+
+                              </div>
+                            </div>
+                          
+                            <div class="information" style="display: flex; flex-direction: column; justify-content: center;" *ngFor="let reg of reg_info">
+                              <p><i class="fas fa-caret-right right-arrow" ></i><span class="pabold">Grade {{ reg.level }}</span></p>
+                              <p *ngIf="reg.strand_id == '1'"><i class="fas fa-caret-right right-arrow" ></i>STEM</p>
+                              <p *ngIf="reg.strand_id == '2'"><i class="fas fa-caret-right right-arrow" ></i>HUMMS</p> 
+
+
+                            </div>
+                            <div class="information" style="display: flex; flex-direction: column; justify-content: center;" *ngFor="let reg of reg_info">
+                              
+
+                              <p class="pabold" style="text-transform: uppercase;"><i class="fas fa-caret-right right-arrow" ></i>{{ reg.semester }}</p>
+                              <p *ngIf="reg.status =='Not Enrolled'" style="text-transform: uppercase;color: rgb(231, 22, 22); font-weight: 600;"><i class="fas fa-caret-right right-arrow" ></i>{{ reg.status }}</p>
+                              <p *ngIf="reg.status =='Enrolled'" style="text-transform: uppercase;color: rgb(13, 163, 13);font-weight: 600;"><i class="fas fa-caret-right right-arrow" ></i>{{ reg.status }}</p>
+
+
+
+                            </div>
+                          </div>
+                            
+                        </div>
+                    </div>
+                    <div class="info" >
+                      <span >Enrollment School Year: {{ currentsy }} </span>
+                      <!-- <div class="filter-button" style="background-color: rgba(211, 211, 211, 0.726); padding: 5px;width: 85px; display: flex;
+                          justify-content: center; border-radius: 30px; align-items: center;">
+                        <a href="" data-toggle="modal" data-target="#subject-filter"><i class="fas fa-filter" style="margin-right: 5px;"></i>Filter</a>
+
+                      </div> -->
+                      
+                    </div>
+
+
+<!-- Grades -->
+                    <div class="grades-classes">
+                      <header class="content-header">
+                          <h4 class="menu-titles">GRADES</h4>
+                      </header>
+                      
+                      <div class="grades-classes" >
+                        
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#table-subjects" role="tab" aria-controls="home" aria-selected="true"><i class="fas fa-th-large"></i> Grid View</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#list-subjects" role="tab" aria-controls="profile" aria-selected="false"><i class="fas fa-table"></i> Table View</a>
+                            </li>
+                           
+                          </ul>
+                          <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="table-subjects" role="tabpanel" aria-labelledby="home-tab">
+                              <app-grades-lists></app-grades-lists>
+                            </div>
+                            <div  class="tab-pane fade" id="list-subjects" role="tabpanel" aria-labelledby="profile-tab"><div class="list-group">
+                              <app-grades-table></app-grades-table>
+                            </div>
+                          </div>
+                        
+                          
+                            
+                      </div>
+
+                      
+
+
+                  </div>
+
+<!-- Subjects -->
+                    <div class="grades-classes">
+                        <header class="content-header">
+                          <h4 class="menu-titles">SUBJECTS</h4>
+                        </header>
+                        
+                        <div class="grades-container">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#table-grades" role="tab" aria-controls="home" aria-selected="true"><i class="fas fa-th-large"></i> Grid View</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#list-grades" role="tab" aria-controls="profile" aria-selected="false"><i class="fas fa-table"></i> Table View</a>
+                                </li>
+                                
+                              </ul>
+                              <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="table-grades" role="tabpanel" aria-labelledby="home-tab">
+                                    <app-subject-lists></app-subject-lists>
+                                </div>
+                                <div class="tab-pane fade" id="list-grades" role="tabpanel" aria-labelledby="profile-tab">
+                                  <app-subject-table style="background-color: black;"></app-subject-table>
+                                </div>
+                              </div>
+                        </div>
+
+                        
+
+
+                    </div>
+                    
+
+                </div>
+
+                
+                <!-- <div class="left-menu">
+                    
+                </div> -->
+                
+            </div>
+            
+
+        </div>
+    </div>
+</div>

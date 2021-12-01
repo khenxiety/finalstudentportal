@@ -1,0 +1,156 @@
+
+<div class="login-component">
+    <header style="display: block; width: 100%; height: 50px; background-color: white;">
+        <div class="header-content">
+            <div class="logo">
+                <img width="35" height="35" src="./assets/bths.png" alt="">
+    
+                <a href="" style="margin-left:10px ;">
+                    Bauan Technical High School
+                    
+                </a>
+                
+            </div>
+    
+            <div class="right">
+                <a href="">
+                    <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="Help" ></i>
+
+                </a>
+                
+            </div>
+        </div>
+    </header>
+    <div class="main-content">
+        <div class="login-container">
+            <div class="content">
+                <div class="image" style="margin-bottom: 30px;">
+                    <img width="100" height="100" src="./assets/bths.png" alt="">
+                </div>
+                <div class="form">
+                    <div class="form-header">
+
+                        <h1>Student Portal Login</h1>
+                    </div>
+                    
+
+                    
+<!-- studebt -->
+                    <div class="inputs" >
+                        <div class="input-col">
+                            <label for="username">Student-Code</label>
+                            <br>
+                            <div class="input-field">
+                                <i class="fas fa-user-graduate" style="margin-right: 15px;margin-left: 5px;"></i>
+                                <input [(ngModel)]="student_code" name="student_code" type="text" placeholder="Student Code" data-toggle="tooltip" data-placement="bottom" title="Enter your Student code">
+                            </div>
+                        </div>
+
+                        <div class="input-col">
+                            <label for="password">Password</label>
+                            <br>
+                            <div class="input-field">
+                                <i (click)="toggle()"  class="far fa-eye" id="togglePassword"  style="margin-right: 15px;margin-left: 5px; cursor: pointer;" data-toggle="tooltip" data-placement="bottom" title="Show and hide password"></i>
+                                <input [(ngModel)]="password" name="password" type="password" placeholder="Password" required="" id="id_password" data-toggle="tooltip" data-placement="bottom" title="Password is case sensitive">
+
+                            </div>
+                            <small id="emailHelp" class="form-text text-muted">Password is case sensitive</small>
+
+                            
+                        </div>
+
+                        <div class="input-col">
+                            <button  class="btn"  mat-raised-button (click)="login_check()" >Login</button>
+                            
+                        </div>
+
+                        <div class="bottom" >
+                            <div class="bottom-box" data-toggle="modal" data-target="#forgot" style="cursor: pointer;">
+                                <a  class="text-success" data-toggle="tooltip" data-placement="top" title="If you have password concerns, click here."><i class="fas fa-lock-open" style="margin-right: 5px;"></i>Forgot Password?</a>
+
+                            </div>
+                            <div class="bottom-box" style="cursor: pointer;" data-toggle="modal" data-target="#contacts">
+                                <a class="text-success" > <i class="fas fa-phone-alt" style="margin-right: 5px;"></i> Contact Us</a>
+
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+    
+            </div>
+
+            
+        </div>
+        
+    </div>
+    
+    
+
+</div>
+
+
+<!-- modals -->
+
+<div class="modal fade" id="forgot" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
+    <app-forgot-pass ></app-forgot-pass>
+</div>
+
+<div class="modal fade" id="contacts" tabindex="-1" role="dialog" aria-labelledby="contacts" aria-hidden="true">
+    <app-contacts></app-contacts>
+</div>
+
+<!-- mobile -->
+
+<div class="mobile">
+    <div class="mobile-header">
+        <div class="image" style="margin-bottom: 30px;">
+            <img width="100" height="100" src="./assets/bths.png" alt="">
+        </div>
+      
+
+        <h1>Student Portal Login</h1>
+        
+
+    </div>
+    <form>
+        <div class="form-group">
+            <label for="username">Student-Code</label>
+            <br>
+            <div class="input-field">
+                <i class="fas fa-user-graduate" style="margin-right: 15px;margin-left: 5px;"></i>
+                <input [(ngModel)]="student_code" name="student_code" type="text" placeholder="Student Code" data-toggle="tooltip" data-placement="bottom" title="Enter your Student code">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <br>
+            <div class="input-field">
+                <i (click)="toggle()"  class="far fa-eye" id="togglePassword"  style="margin-right: 15px;margin-left: 5px; cursor: pointer;" data-toggle="tooltip" data-placement="bottom" title="Show and hide password"></i>
+                <input [(ngModel)]="password" name="password" type="password" placeholder="Password" required="" id="id_password" data-toggle="tooltip" data-placement="bottom" title="Password is case sensitive">
+
+            </div>
+            <small id="emailHelp" class="form-text text-muted">Password is case sensitive</small>
+        </div>
+        <!-- <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div> -->
+        <button  class="btn"  mat-raised-button (click)="login_check()" >Login</button>
+        <div class="bottom" >
+            <div class="bottom-box" data-toggle="modal" data-target="#forgot" style="cursor: pointer;">
+                <a  class="text-success" data-toggle="tooltip" data-placement="top" title="If you have password concerns, click here."><i class="fas fa-lock-open" style="margin-right: 5px;"></i>Forgot Password?</a>
+
+            </div>
+            <div class="bottom-box" style="cursor: pointer;" data-toggle="modal" data-target="#contacts">
+                <a class="text-success" > <i class="fas fa-phone-alt" style="margin-right: 5px;"></i> Contact Us</a>
+
+            </div>
+        </div>
+      </form>
+
+
+</div>
+
+

@@ -1,0 +1,30 @@
+<div class="container bootstrap snippets bootdey" >
+    <header style="width: 100%; display: flex; justify-content: right;  margin-bottom: 20px;">
+          
+      <button  class="btn btn-primary" (click)="openModal()">
+          <i class="fa fa-filter"></i>
+          Filter {{ syButton }}
+      </button>
+      
+    </header>
+      <div class="table-responsive" >
+          
+          <table class="w3-animate-opacity" style="margin-bottom: 80px; ">
+              <tr>
+                <th>Code</th>
+                <th>Subject</th>
+                <th>Instructor</th>
+                <th>School Year</th>
+              </tr>
+              <tr *ngFor="let subjects of currentsubjects">
+                <td>{{ subjects.subject }}</td>
+                <td >{{ subjects.title }}</td>
+                <td>{{ subjects.fname }} {{ subjects.lname }}</td>
+                <td>{{ subjects.SY }}</td>
+  
+              </tr>
+              
+            
+            </table>
+      </div>
+  </div>

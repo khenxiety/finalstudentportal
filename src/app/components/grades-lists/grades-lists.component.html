@@ -1,0 +1,26 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container" >
+
+    <header style="width: 100%; display: flex; justify-content: right;  margin-bottom: 20px;">
+        
+        <button  class="btn btn-primary" (click)="openModal()">
+            <i class="fa fa-filter"></i>
+            Filter {{ syButton }}
+        </button>
+        
+    </header>
+    <div class="row" >
+        <div class="col-md-4 col-xl-3" *ngFor="let grades of currentsubjects">
+            <div class="card bg-c-blue order-card grades.color" >
+                <div class="card-block">
+                    <h5 class="m-b-20">{{ grades.title }} </h5>
+                    <h2 class="text-right"><i [class]="grades.icon"></i><span>{{ grades.att4 }}</span></h2>
+                    <p class="m-b-0"><span style="font-weight: 900; font-size: 1.2rem;">{{ grades.subject }}</span><span class="f-right">Pass</span></p>
+                </div>
+            </div>
+        </div>  
+
+        
+    </div>
+</div>
+

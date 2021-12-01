@@ -1,0 +1,71 @@
+.but {
+    width: 100%;
+  }
+  .button {
+    float: right;
+    color: white;
+    background-color: rgb(0, 146, 0);
+  }
+  
+  input {
+    height: 50px;
+    padding-left: 5px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(240, 240, 240);
+    width: 100%;
+  
+    font-size: 1.2em;
+    transition: 0.5s;
+    outline-color: #b83838;
+  }
+  
+  
+  
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td,
+  th {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  /*Change color to gray*/
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  
+  .actived a {
+    color: green;
+  }
+  .actived a:hover {
+    font-weight: bold;
+  }
+  
+  .deactivated a {
+    color: red;
+  }
+  .deactivated a:hover {
+    font-weight: bold;
+  }
+  
+  .available {
+    color: green;
+  }
+  .disable {
+    color: red;
+    font-weight: bold;
+  }
+  .intraining {
+    color: blue;
+    font-weight: bold;
+  }
+  .vacation {
+    font-weight: bold;
+  }
+  

@@ -1,0 +1,22 @@
+.but {
+    width: 100%;
+  }
+  .button {
+    float: right;
+    color: white;
+    background-color: rgb(0, 146, 0);
+  }
+  
+  input {
+    height: 50px;
+      padding-left: 5px;
+    border: none;
+    // border-radius: 10px;
+    background-color: rgb(233, 232, 232);
+    width: 100%;
+  
+    font-size: 1.2em;
+    transition: 0.5s;
+    outline-color: #b83838;
+  }
+  

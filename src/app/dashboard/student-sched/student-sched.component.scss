@@ -1,0 +1,72 @@
+.dashboard-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    background-color: rgb(216, 216, 216);
+
+
+    .main-content{
+        height: 100%;
+        width: 100%;
+        padding-left: 5px;
+
+        .contents{
+            height: 100%;
+            width: 100%;
+
+            .box{
+                height: 100%;
+
+                width: 100%;
+                
+                display: flex;
+                
+                
+                flex-direction: column;
+                .main-menu{
+                    height: 100%;
+                    
+                    width: 100%;
+                    position: relative;
+                    background-color: rgb(255, 255, 255);
+                    
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+                    
+
+                    
+                    border-radius: 6px;
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    padding: 30px;
+                    animation: fade-mains .5s ease forwards;
+
+
+
+                    .bottom{
+                        position: absolute;
+                        bottom: 0;
+                        padding-bottom: 25px;
+                        
+                        
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+@keyframes fade-main{
+    from{
+        transform: translateY(-1rem);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0rem);
+        opacity: 1;
+
+
+    }
+}

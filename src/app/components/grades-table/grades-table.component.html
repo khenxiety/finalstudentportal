@@ -1,0 +1,41 @@
+
+<div class="container bootstrap snippets bootdey" >
+	<header style="width: 100%; display: flex; justify-content: right;  margin-bottom: 20px;">
+		  
+	  <button  class="btn btn-primary" (click)="openModal()">
+		  <i class="fa fa-filter"></i>
+		  Filter {{ syButton }}
+	  </button>
+	  
+	</header>
+	  <div class="table-responsive" >
+		  
+		  <table class="w3-animate-opacity" style="margin-bottom: 80px; ">
+			  <tr>
+					<th>Subject</th>
+    				<th>Instructor</th>
+
+    				<th>Prelims</th>
+    				<th>Midterms</th>
+    				<th>Semis</th>
+    				<th>Finals</th>
+    				<th>Status</th>
+			  </tr>
+			  <tr *ngFor="let grades of currentsubjects">
+				<td><a href="#">{{grades.subject}}</a></td>
+				<td><a href="#">{{grades.fname}} {{grades.lname}}</a></td>
+
+				<td>{{grades.att1}}</td>
+				<td>{{grades.att2}}</td>
+				<td>{{grades.att2}}</td>
+				<td>{{grades.att3}}</td>
+
+
+				
+				<td><span class="label label-success">Pass</span></td>
+			</tr>
+			  
+			
+			</table>
+	  </div>
+  </div>

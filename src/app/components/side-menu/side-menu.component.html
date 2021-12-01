@@ -1,0 +1,38 @@
+<div class="side-menu">
+    <div class="top">
+        <div class="logo-container" >
+            
+            <img src="./assets/bths.png" alt="">
+
+        </div>
+        <div class="options">
+            <ul>
+                <li id="portal_tab"  (click)="activeOne()" >
+                    
+                    <i class="fas fa-home"></i>
+                    <a href="">Portal</a>
+                </li>
+                <li id="sched_tab" (click)="activeThree()" >
+                    <i class="far fa-calendar"></i>
+                    <a href="">Schedule</a>
+                </li>
+                <li id="two" routerLink="/student-advisories"  > 
+                    <i class="fas fa-bullhorn"></i>
+                    <a href="">Advisories</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+    <div class="bottom-bar">
+        <i class="fas fa-info-circle"></i>
+        <a href="">Help</a>
+        
+    </div>
+    <div class="sign-out">
+        <i style="margin-right: 5px;" class="fas fa-sign-out-alt text-danger"></i>
+        <a class="text-danger" (click)="logout()">Sign-out</a>
+    </div>
+    
+
+</div>
