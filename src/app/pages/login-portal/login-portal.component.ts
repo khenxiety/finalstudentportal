@@ -51,7 +51,7 @@ export class LoginPortalComponent implements OnInit {
         
         this.acc=res
         this.acc = this.acc.filter((classes: { level: any; }) => classes.level === 'student');
-        console.log(this.acc);
+//         console.log(this.acc);
         
         
        
@@ -94,11 +94,11 @@ export class LoginPortalComponent implements OnInit {
           
           localStorage.setItem('code',id_encrypted);
           
-          console.log(id_encrypted)
+//           console.log(id_encrypted)
 
           let bits = CryptoJS.AES.decrypt(id_encrypted,this.secretKey);
           var dec = JSON.parse(bits.toString(CryptoJS.enc.Utf8))
-          console.log(dec);
+//           console.log(dec);
           
           
 
