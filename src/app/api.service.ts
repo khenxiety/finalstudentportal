@@ -25,6 +25,10 @@ export class ApiService {
     return this.http.get('https://btihs-portal-backends.herokuapp.com/getaccounts.php');
     
   }
+  getStudent(){
+    return this.http.get('https://btihs-portal-backend.herokuapp.com/getStudents.php');
+
+  }
 
   getStudentInfo(id: string){
     return this.http.get('https://btihs-portal-backends.herokuapp.com/getStudentInfo.php?id='+id);
