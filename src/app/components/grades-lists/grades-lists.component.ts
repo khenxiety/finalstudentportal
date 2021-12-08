@@ -27,12 +27,12 @@ export class GradesListsComponent implements OnInit {
   constructor(private api:ApiService, public dialog: MatDialog) {
     try {
       this.id_encrypt=localStorage.getItem('stud_id');
-      console.log(this.id_encrypt)
+//       console.log(this.id_encrypt)
 
 
       let bits = CryptoJS.AES.decrypt(this.id_encrypt,this.secretKey);
       this.code = JSON.parse(bits.toString(CryptoJS.enc.Utf8))
-      console.log(this.code);
+//       console.log(this.code);
       
     } catch (error) {
       console.log('subject-listerror')
@@ -60,13 +60,13 @@ export class GradesListsComponent implements OnInit {
     this.syButton=this.sy;
 
     this.api.getEnrolledSubjects(this.code).subscribe((res:any)=> {
-      console.log("Success===",res);
+//       console.log("Success===",res);
       
       this.subjects=res;
 
       this.currentsubjects=this.subjects.filter((e: { SY: any; })=>e.SY==this.sy)
       
-      console.log(this.subjects)
+//       console.log(this.subjects)
       
 
       
