@@ -31,7 +31,7 @@ export class GradesTableComponent implements OnInit {
 
       let bits = CryptoJS.AES.decrypt(this.id_encrypt,this.secretKey);
       this.code = JSON.parse(bits.toString(CryptoJS.enc.Utf8))
-      console.log(this.code);
+//       console.log(this.code);
       
     } catch (error) {
       console.log('subject-listerror')
@@ -55,13 +55,13 @@ export class GradesTableComponent implements OnInit {
 
 
     this.api.getEnrolledSubjects(this.code).subscribe((res:any)=> {
-      console.log("Success===",res);
+//       console.log("Success===",res);
       
       this.subjects=res;
 
       this.currentsubjects=this.subjects.filter((e: { SY: any; })=>e.SY==this.sy)
       
-      console.log(this.subjects)
+//       console.log(this.subjects)
       
 
       
