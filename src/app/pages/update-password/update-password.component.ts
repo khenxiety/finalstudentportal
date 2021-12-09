@@ -40,7 +40,7 @@ export class UpdatePasswordComponent implements OnInit {
 
 
     let d={
-      new_password:this.encrypted
+      new_password:this.password
     }
     if(this.password==null && this.student_code==null){
       this.toast.open('Please input a valid text.','Dismiss',{duration:2000})
